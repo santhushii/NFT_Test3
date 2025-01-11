@@ -3,30 +3,48 @@ import os
 
 # Define paths
 layers_path = "E:/NFTTest3/layers"
-background_path = os.path.join(layers_path, "background", "body.png")
-crown_path = os.path.join(layers_path, "crown")
 output_path = "E:/NFTTest3/output"
 
 # Ensure output directory exists
 os.makedirs(output_path, exist_ok=True)
 
-# Load the body image
-body = Image.open(background_path).convert("RGBA")
-body = body.resize((600, 600))
+# Get all layer folders in the correct order (adjust order as needed)
+layer_folders = [f for f in os.listdir(layers_path) if os.path.isdir(os.path.join(layers_path, f))]
+layer_folders.sort()  # Ensure layers are processed in alphabetical order or customize as needed
 
-# List all crowns
-crown_files = [f for f in os.listdir(crown_path) if f.endswith(".png")]
+# Load all possible images from each layer
+layers = {}
+for layer in layer_folders:
+    layer_path = os.path.join(layers_path, layer)
+    layers[layer] = [os.path.join(layer_path, f) for f in os.listdir(layer_path) if f.endswith(".png")]
+
+# Initialize global NFT count
+nft_count = 0
 
 # Generate NFTs
-for crown_file in crown_files:
-    crown = Image.open(os.path.join(crown_path, crown_file)).convert("RGBA")
-    crown = crown.resize((600, 600))
+for background in layers.get("background", []):
+    base_image = Image.open(background).convert("RGBA").resize((600, 600))
 
-    # Composite the images
-    combined = Image.alpha_composite(body, crown)
+    # Loop through combinations of other layers
+    def generate_combinations(current_image, current_layers):
+        global nft_count
 
-    # Save the output
-    output_file = os.path.join(output_path, f"nft_{os.path.splitext(crown_file)[0]}.png")
-    combined.save(output_file, "PNG")
+        if not current_layers:
+            # Save the generated NFT
+            output_file = os.path.join(output_path, f"nft_{nft_count}.png")
+            current_image.save(output_file, "PNG")
+            nft_count += 1
+            return
 
-print(f"NFTs generated and saved in: {output_path}")
+        # Process the next layer
+        next_layer_name, *remaining_layers = current_layers
+        for item in layers[next_layer_name]:
+            layer_image = Image.open(item).convert("RGBA").resize((600, 600))
+            combined_image = Image.alpha_composite(current_image, layer_image)
+            generate_combinations(combined_image, remaining_layers)
+
+    # Start generating combinations for the current background
+    remaining_layer_names = [layer for layer in layer_folders if layer != "background"]
+    generate_combinations(base_image, remaining_layer_names)
+
+print(f"{nft_count} NFTs generated and saved in: {output_path}")
