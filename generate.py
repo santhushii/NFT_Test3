@@ -20,6 +20,7 @@ for layer in layer_folders:
 
 # Initialize global NFT count
 nft_count = 0
+max_nfts = 100  # Limit the number of NFTs to generate
 
 # Generate NFTs
 for background in layers.get("background", []):
@@ -28,6 +29,10 @@ for background in layers.get("background", []):
     # Loop through combinations of other layers
     def generate_combinations(current_image, current_layers):
         global nft_count
+
+        # Stop generation if the maximum limit is reached
+        if nft_count >= max_nfts:
+            return
 
         if not current_layers:
             # Save the generated NFT
@@ -39,6 +44,8 @@ for background in layers.get("background", []):
         # Process the next layer
         next_layer_name, *remaining_layers = current_layers
         for item in layers[next_layer_name]:
+            if nft_count >= max_nfts:
+                return
             layer_image = Image.open(item).convert("RGBA").resize((600, 600))
             combined_image = Image.alpha_composite(current_image, layer_image)
             generate_combinations(combined_image, remaining_layers)
@@ -46,5 +53,9 @@ for background in layers.get("background", []):
     # Start generating combinations for the current background
     remaining_layer_names = [layer for layer in layer_folders if layer != "background"]
     generate_combinations(base_image, remaining_layer_names)
+
+    # Stop if the maximum limit is reached
+    if nft_count >= max_nfts:
+        break
 
 print(f"{nft_count} NFTs generated and saved in: {output_path}")
