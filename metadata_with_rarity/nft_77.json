@@ -1,0 +1,32 @@
+{
+    "name": "NFT #nft_77",
+    "description": "This is a unique NFT from my collection.",
+    "image": "https://example.com/nft/nft_77.png",
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "Blue"
+        },
+        {
+            "trait_type": "Band",
+            "value": "Gold"
+        },
+        {
+            "trait_type": "Chain",
+            "value": "Diamond"
+        },
+        {
+            "trait_type": "Crown",
+            "value": "Ruby"
+        },
+        {
+            "trait_type": "Earring",
+            "value": "Pearl"
+        },
+        {
+            "trait_type": "Sash",
+            "value": "Silk Red"
+        }
+    ],
+    "rarity_score": 6.0
+}
