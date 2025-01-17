@@ -1,0 +1,27 @@
+{
+    "name": "NFT #nft_180",
+    "description": "This is a unique NFT from my collection.",
+    "image": "https://example.com/nft/nft_180.png",
+    "attributes": [
+        {
+            "trait_type": "Chain",
+            "value": "blue"
+        },
+        {
+            "trait_type": "Earring",
+            "value": "yellow"
+        },
+        {
+            "trait_type": "Crown",
+            "value": "yellow"
+        },
+        {
+            "trait_type": "Sash",
+            "value": "orange"
+        },
+        {
+            "trait_type": "Band",
+            "value": "green"
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "name": "NFT #nft_367",
+    "description": "This is a unique NFT from my collection.",
+    "image": "https://example.com/nft/nft_367.png",
+    "attributes": [
+        {
+            "trait_type": "Chain",
+            "value": "light_blue"
+        },
+        {
+            "trait_type": "Earring",
+            "value": "purple"
+        },
+        {
+            "trait_type": "Crown",
+            "value": "yellow"
+        },
+        {
+            "trait_type": "Sash",
+            "value": "purple"
+        },
+        {
+            "trait_type": "Band",
+            "value": "blue"
+        }
+    ],
+    "rarity_score": 38.477681759869476
+}

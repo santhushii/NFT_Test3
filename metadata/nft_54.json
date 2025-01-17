@@ -4,28 +4,24 @@
     "image": "https://example.com/nft/nft_54.png",
     "attributes": [
         {
-            "trait_type": "Background",
-            "value": "Blue"
-        },
-        {
-            "trait_type": "Band",
-            "value": "Gold"
-        },
-        {
             "trait_type": "Chain",
-            "value": "Diamond"
-        },
-        {
-            "trait_type": "Crown",
-            "value": "Ruby"
+            "value": "green"
         },
         {
             "trait_type": "Earring",
-            "value": "Pearl"
+            "value": "orange"
+        },
+        {
+            "trait_type": "Crown",
+            "value": "orange"
         },
         {
             "trait_type": "Sash",
-            "value": "Silk Red"
+            "value": "orange"
+        },
+        {
+            "trait_type": "Band",
+            "value": "light_blue"
         }
     ]
 }

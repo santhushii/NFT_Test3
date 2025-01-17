@@ -4,29 +4,25 @@
     "image": "https://example.com/nft/nft_89.png",
     "attributes": [
         {
-            "trait_type": "Background",
-            "value": "Blue"
-        },
-        {
-            "trait_type": "Band",
-            "value": "Gold"
-        },
-        {
             "trait_type": "Chain",
-            "value": "Diamond"
-        },
-        {
-            "trait_type": "Crown",
-            "value": "Ruby"
+            "value": "yellow"
         },
         {
             "trait_type": "Earring",
-            "value": "Pearl"
+            "value": "yellow"
+        },
+        {
+            "trait_type": "Crown",
+            "value": "yellow"
         },
         {
             "trait_type": "Sash",
-            "value": "Silk Red"
+            "value": "yellow"
+        },
+        {
+            "trait_type": "Band",
+            "value": "red"
         }
     ],
-    "rarity_score": 6.0
+    "rarity_score": 40.748012217021106
 }

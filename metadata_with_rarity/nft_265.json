@@ -1,0 +1,28 @@
+{
+    "name": "NFT #nft_265",
+    "description": "This is a unique NFT from my collection.",
+    "image": "https://example.com/nft/nft_265.png",
+    "attributes": [
+        {
+            "trait_type": "Chain",
+            "value": "purple"
+        },
+        {
+            "trait_type": "Earring",
+            "value": "green"
+        },
+        {
+            "trait_type": "Crown",
+            "value": "red"
+        },
+        {
+            "trait_type": "Sash",
+            "value": "blue"
+        },
+        {
+            "trait_type": "Band",
+            "value": "blue"
+        }
+    ],
+    "rarity_score": 42.294644808000804
+}

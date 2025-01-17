@@ -1,0 +1,28 @@
+{
+    "name": "NFT #nft_404",
+    "description": "This is a unique NFT from my collection.",
+    "image": "https://example.com/nft/nft_404.png",
+    "attributes": [
+        {
+            "trait_type": "Chain",
+            "value": "green"
+        },
+        {
+            "trait_type": "Earring",
+            "value": "yellow"
+        },
+        {
+            "trait_type": "Crown",
+            "value": "blue"
+        },
+        {
+            "trait_type": "Sash",
+            "value": "light_blue"
+        },
+        {
+            "trait_type": "Band",
+            "value": "purple"
+        }
+    ],
+    "rarity_score": 42.35811076947503
+}

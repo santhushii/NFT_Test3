@@ -1,0 +1,28 @@
+{
+    "name": "NFT #nft_169",
+    "description": "This is a unique NFT from my collection.",
+    "image": "https://example.com/nft/nft_169.png",
+    "attributes": [
+        {
+            "trait_type": "Chain",
+            "value": "orange"
+        },
+        {
+            "trait_type": "Earring",
+            "value": "blue"
+        },
+        {
+            "trait_type": "Crown",
+            "value": "orange"
+        },
+        {
+            "trait_type": "Sash",
+            "value": "green"
+        },
+        {
+            "trait_type": "Band",
+            "value": "orange"
+        }
+    ],
+    "rarity_score": 41.72573601004957
+}
